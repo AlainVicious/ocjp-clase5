@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -53,7 +54,16 @@ public class ArrayLists {
         lista.add("elemento2");
 
         Object[] arrStr = lista.toArray();
-        
+
+        System.out.println(arrStr);
+
+        System.out.println("\n\narreglos a lista....\n\n");
+
+        String[] arreglo = {"Hulk", "Spiderman"};
+        List<String> lista3 = Arrays.asList(arreglo);
+
+        System.out.println(lista3);
+
 
     }
 }
