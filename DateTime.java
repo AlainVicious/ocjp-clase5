@@ -41,5 +41,20 @@ public class DateTime {
         System.out.println(hora1);
         System.out.println(hora2);
         System.out.println(hora3);
+
+
+
+        System.out.println("\n\nperiodos\n\n");
+
+        LocalDate inicio = LocalDate.of(2020, Month.JANUARY, 1); // deinimos fecha inicio
+        LocalDate fin = LocalDate.of(2020, Month.DECEMBER, 30); // definimos fecha fin
+        Period periodo = Period.ofMonths(1); // definimos cuanto de va a hacer el incremento enperiodo
+        LocalDate hasta = inicio; // inicializamos nuestro iterador
+
+        while (hasta.isBefore(fin)) {
+            System.out.println("Pagar recibo: " + hasta); // imprimo fecha en curso iterada
+            hasta = hasta.plus(periodo); // le sumo el lapso de periodo que en este caso es un mes 
+        }
+
     }
 }
