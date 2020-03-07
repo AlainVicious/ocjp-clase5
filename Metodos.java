@@ -14,10 +14,14 @@ public class Metodos {
         Telefono t3 = new Telefono();
         System.out.println(t3.numeroSerie);
         System.out.println(t3.telefonoId);
-        
+
         Telefono t4 = new Telefono();
         System.out.println(t4.numeroSerie);
         System.out.println(t4.telefonoId);
+
+    }
+    void mascosas(){
+        System.out.println("ok mas cosas");
     }
 }
 class Telefono {
@@ -31,4 +35,5 @@ class Telefono {
     private void generarSerie() {
         numeroSerie = ++telefonoId;
     }
+
 }
