@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -11,7 +13,6 @@ public class ArrayLists {
         
         ArrayList<String> al = new ArrayList<String>();
         ArrayList<String> al2 = new ArrayList<>();
-
         
         al.add("a");
         al.add("e");
@@ -28,7 +29,6 @@ public class ArrayLists {
         al.remove("a");
         al.remove(1);
         
-        
         al.set(2, "z");
         
         System.out.println("es vacia? " + al.isEmpty());
@@ -39,7 +39,6 @@ public class ArrayLists {
 
         al.clear();
         System.out.println(al);
-        
         
         //////////////
         //////////////
@@ -64,6 +63,20 @@ public class ArrayLists {
 
         System.out.println(lista3);
 
+        System.out.println("\n\nsort\n\n");
+
+        List<Integer> listaNumeros = new ArrayList<>();
+        listaNumeros.add(1);
+        listaNumeros.add(55);
+        listaNumeros.add(87);
+        listaNumeros.add(23);
+        listaNumeros.add(10);
+
+        System.out.println(listaNumeros);
+
+        Collections.sort(listaNumeros);
+
+        System.out.println(listaNumeros);
 
     }
 }
