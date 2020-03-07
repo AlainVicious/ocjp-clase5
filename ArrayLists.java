@@ -35,9 +35,10 @@ public class ArrayLists {
         System.out.println("es vacia? " + al.isEmpty());
         System.out.println("contiene \"z\"? " + al.contains("z"));
         System.out.println("el tamano es: " + al.size());
-
         System.out.println("lista 1 es igual a lista 2? " + al.equals(al2));
+        System.out.println(al);
 
+        al.clear();
         System.out.println(al);
     }
 }
