@@ -3,6 +3,7 @@
 // import java.time.LocalTime;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 /**
  * DateTime
@@ -52,9 +53,35 @@ public class DateTime {
         LocalDate hasta = inicio; // inicializamos nuestro iterador
 
         while (hasta.isBefore(fin)) {
-            System.out.println("Pagar recibo: " + hasta); // imprimo fecha en curso iterada
+            System.out.println("Pagar recibo: " + hasta.format(DateTimeFormatter.ISO_DATE)); // imprimo fecha en curso iterada
             hasta = hasta.plus(periodo); // le sumo el lapso de periodo que en este caso es un mes 
         }
+
+
+
+        LocalDateTime dateTime = LocalDateTime.of(2020, Month.JANUARY, 1, 10, 35, 46);
+
+        LocalDate date = LocalDate.of(2020, Month.APRIL, 29);
+        LocalDate date2 = LocalDate.of(2020, Month.APRIL, 8);
+
+
+        int dif = date.compareTo(date2);
+
+        System.out.println("dias d ediferencia entre " + date + " y " + date2 + "son: " + dif );
+
+        LocalTime time = LocalTime.of(10,10);
+
+        LocalDateTime dateTime2 = LocalDateTime.of(date, time);
+
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
+        // date = date.parse("01*01*2020");
+        // date = date.parse("01/01/20", formato);
+
+        dateTime= dateTime.parse("01/01/2020 10:45", formato);
+
+
+        System.out.println(dateTime);
 
     }
 }
