@@ -11,9 +11,7 @@ public class ArrayLists {
         ArrayList<String> al = new ArrayList<String>();
         ArrayList<String> al2 = new ArrayList<>();
 
-        List<String> lista = new ArrayList<String>();
-        List<String> lista2 = new ArrayList<>();
-
+        
         al.add("a");
         al.add("e");
         al.add("i");
@@ -28,10 +26,10 @@ public class ArrayLists {
         
         al.remove("a");
         al.remove(1);
-
-
+        
+        
         al.set(2, "z");
-
+        
         System.out.println("es vacia? " + al.isEmpty());
         System.out.println("contiene \"z\"? " + al.contains("z"));
         System.out.println("el tamano es: " + al.size());
@@ -40,5 +38,22 @@ public class ArrayLists {
 
         al.clear();
         System.out.println(al);
+        
+        
+        //////////////
+        //////////////
+        //////////////
+
+        System.out.println("\n\nlista a arreglos....\n\n");
+        
+        List<String> lista = new ArrayList<String>();
+        List<String> lista2 = new ArrayList<>();
+        
+        lista.add("elemento1");
+        lista.add("elemento2");
+
+        Object[] arrStr = lista.toArray();
+        
+
     }
 }
